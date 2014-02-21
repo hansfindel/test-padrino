@@ -1,0 +1,10 @@
+padrino g project posts-test -a postgres -d activerecord
+
+padrino g model post title:string body:text
+padrino g controller posts
+
+Modify config/database.rb for the db
+bundle exec rake db:create
+bundle exec rake db:migrate
+
+padrino start
