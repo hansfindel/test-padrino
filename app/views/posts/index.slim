@@ -1,14 +1,19 @@
+h1
+  | Posts this far...
 ul
   - @posts.each do |p|
     li
       h2
         = p.title
       p
-      	= p.body
+      	= p.body 
+        = link_to "x", url_for(:posts, :delete, p.id), {method: :delete}
 
 p
   | some text
 
+h3
+  | New post
 = form_for @post, '/post', :id => 'post_form' do |f|
   = f.error_messages(:header_message => "custom MarkupUser cannot be saved!")
   p
