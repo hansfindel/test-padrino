@@ -18,7 +18,6 @@ ActiveRecord::Base.configurations[:development] = {
   :database  => 'posts_test_development',
   :host      => 'localhost',
   :port      => 5432
-
 }
 
 ActiveRecord::Base.configurations[:production] = {

@@ -1,16 +1,20 @@
 h1
   | Posts this far...
-ul
+table
+  tr
+    th Title
+    th Body
+    th
   - @posts.each do |p|
-    li
-      h2
-        = p.title
-      p
-      	= p.body 
+    tr
+      td
+        h2
+          = p.title
+      td 
+        p
+          = p.body 
+      td
         = link_to "x", url_for(:posts, :delete, p.id), {method: :delete}
-
-p
-  | some text
 
 h3
   | New post
@@ -23,4 +27,4 @@ h3
     = f.label :body
     = f.text_area :body, :class => 'post-body', :placeholder => "Post body"
   p
-    = f.image_submit "padrino.png", :class => 'success', :id => 'image-button'
+    = f.submit "Post", :class => 'success', :id => 'image-button'
