@@ -34,3 +34,5 @@ gem 'padrino', '0.12.0'
 group :production do
  gem 'pg'
 end
+
+gem 'thin'
