@@ -1,0 +1,1 @@
+// static content for the application.js file
